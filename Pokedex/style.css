@@ -1,0 +1,655 @@
+@font-face {
+  font-family: pokemon;
+  src: url(fonts/Pokemon.ttf);
+}
+
+@font-face {
+  font-family: joystix;
+  src: url(fonts/joystix.ttf);
+}
+
+.title {
+  position: absolute;
+  width: 99%;
+  padding: 0;
+  margin: 0;
+  font-family: pokemon;
+  font-size: 4rem;
+  text-align: center;
+  color: #ffcb05;
+  -webkit-text-stroke: 4px #415ba6;
+}
+
+/* ----- Pokedex Body -----*/
+.pokedex {
+  position: absolute;
+  top: 8rem;
+  left: 20rem;
+  width: 47rem;
+  height: 32rem;
+}
+
+/* --- Pokedex's left side ---*/
+.leftSide {
+  position: relative;
+  float: left;
+  background-color: #252525;
+  height: 31.3rem;
+  width: 24.6rem;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  box-shadow: -10px 8px 1px 3px #006a4e;
+}
+
+/* - Pokedex's left side top part - */
+.topLeftPart {
+  position: absolute;
+  width: 25rem;
+  height: 3.2rem;
+  background-color: #003b2b;
+  border-top-left-radius: 2rem;
+  box-shadow: -10px 8px 1px 3px #006a4e;
+}
+
+.topLeftPart:nth-child(2) {
+  width: 230px;
+  height: 100px;
+  border-bottom-right-radius: 10rem;
+  border-top-left-radius: 30px;
+  box-shadow: -10px 8px 1px 3px #006a4e;
+  z-index: 2;
+}
+
+.camara {
+  position: absolute;
+  top: 0.7rem;
+  left: 1rem;
+  width: 4rem;
+  height: 4rem;
+  background: radial-gradient(#a7c7da, #3aa2d3);
+  border-radius: 5rem;
+  border-style: solid;
+  border-color: antiquewhite;
+  border-width: 0.5rem;
+  z-index: 2;
+}
+
+#reflect {
+  position: absolute;
+  top: 0.7rem;
+  left: 1rem;
+  width: 1rem;
+  height: 1rem;
+  background: #f7f2ed;
+  border-radius: 1.2rem 1rem;
+  box-shadow: 1px 1px 7px 13px #f7f2ed;
+}
+
+.colorlights {
+  display: flex;
+  justify-content: space-between;
+  width: 5.5rem;
+  margin: 12rem auto auto 7rem;
+}
+
+#lights {
+  position: relative;
+  top: -12rem;
+  left: -1.8rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  background: radial-gradient(#fb7575, #252525);
+  border-radius: 2rem;
+  box-shadow: 1px 1px 10px 5px #006a4e;
+}
+
+#lights:nth-child(2) {
+  background: radial-gradient(#fbfb8a, #ffff00);
+}
+#lights:nth-child(3) {
+  background: radial-gradient(#acfb76, #30da0c);
+}
+
+/* - Pokedex's left side screen - */
+.screenCase {
+  position: absolute;
+  top: 7rem;
+  background-color: white;
+  width: 20rem;
+  height: 15rem;
+  border-radius: 20px;
+  box-shadow: 5px 5px 1px 0px #006a4e;
+}
+
+#topLight {
+  position: absolute;
+  align-self: center;
+  top: 0.3rem;
+  left: 9rem;
+  background: radial-gradient(#fb7575, #252525);
+  border-radius: 100px;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  height: 0.8rem;
+  width: 0.8rem;
+}
+
+#topLight:nth-child(2) {
+  left: 11rem;
+}
+
+#screen {
+  position: absolute;
+  top: 1.8rem;
+  left: 1.5rem;
+  background-image: url(images/PokeCard.png);
+  background-size: cover;
+  width: 17rem;
+  height: 10.2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 50px 15px #000000 inset, 1px 2px 5px 1px #000000;
+}
+
+.pokesnap {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  width: 16rem;
+  height: 9rem;
+  z-index: 5;
+}
+
+/* - Screen Background type color - */
+.grass {
+  background-color: #6ba497;
+}
+.fire {
+  background-color: #ff8f7b;
+}
+.water {
+  background-color: #84c2ff;
+}
+.bug {
+  background-color: #ccd77b;
+}
+.normal {
+  background-color: #bdbaae;
+}
+.poison {
+  background-color: #7b30a9;
+}
+.electric {
+  background-color: #ffe55b;
+}
+.ground {
+  background-color: #c69c05;
+}
+.fairy {
+  background-color: #efaeff;
+}
+.psychic {
+  background-color: #f44987;
+}
+.fighting {
+  background-color: #a99a89;
+}
+.rock {
+  background-color: #898f71;
+}
+.ghost {
+  background-color: #7465cf;
+}
+.ice {
+  background-color: #aacef1;
+}
+.dragon {
+  background-color: #c882f3;
+}
+.flying {
+  background-color: #c2d9de;
+}
+.steel {
+  background-color: #9faca9;
+}
+.dark {
+  background-color: #4f4a46;
+}
+
+#borderCut {
+  position: absolute;
+  top: 13rem;
+  border-style: solid;
+  border-width: 40px 0 0 40px;
+  border-color: transparent transparent transparent #252525;
+}
+
+#redButton {
+  position: absolute;
+  top: 12.5rem;
+  height: 1.9rem;
+  width: 1.9rem;
+  left: 3.1rem;
+  background: linear-gradient(#252525, #003b2b);
+  border-radius: 100px;
+  box-shadow: 2px 2px 10px 1px #6ba497;
+  cursor: pointer;
+}
+
+#speaker {
+  position: relative;
+  margin: 1px;
+  top: 12.5rem;
+  left: 11rem;
+  height: 0.35rem;
+  width: 3rem;
+  background: linear-gradient(#252525, #003b2b);
+  box-shadow: 1px 1px 0px 0px #000000;
+  border-radius: 15%;
+}
+
+#speaker2 {
+  position: relative;
+  margin: 1px;
+  top: 10.9rem;
+  left: 14.5rem;
+  height: 0.35rem;
+  width: 3rem;
+  background: linear-gradient(#252525, #003b2b);
+  box-shadow: 1px 1px 0px 0px #000000;
+  border-radius: 15%;
+}
+
+/* - Pokedex's left buttons - */
+.playButton {
+  position: absolute;
+  top: 23rem;
+  border-radius: 100px;
+  height: 3rem;
+  width: 3rem;
+  background: linear-gradient(#6b5a61, #7e6870);
+  box-shadow: 1px 2px 5px 2px #000000;
+  cursor: pointer;
+}
+
+.greenButton {
+  position: absolute;
+  top: 24rem;
+  left: 5rem;
+  border-radius: 100px;
+  height: 1rem;
+  width: 3rem;
+  box-shadow: 0px 0.5px 5px 0px #30da0c;
+  background: radial-gradient(#acfb76, #30da0c);
+  cursor: pointer;
+}
+
+.violetButton {
+  position: absolute;
+  top: 24rem;
+  left: 9rem;
+  border-radius: 100px;
+  height: 1rem;
+  width: 3rem;
+  box-shadow: 0px 0.5px 5px 0px #7a3e83;
+  background: radial-gradient(#a39dd0, #7a3e83);
+  cursor: pointer;
+}
+
+.displayName {
+  position: absolute;
+  top: 26.5rem;
+  border-radius: 10px;
+  height: 2.5rem;
+  width: 12rem;
+  box-shadow: 2px 2px 5px 2px #002e29 inset, 0px 0px 5px 1px #252525;
+  background-color: #669187;
+  font-size: 0.9em;
+  text-align: center;
+  font-family: "joystix";
+  color: white;
+}
+
+#info {
+  margin-top: 10px;
+}
+
+/* - Pokedex's left cross - */
+.cross {
+  position: absolute;
+  top: 24rem;
+  left: 14.5rem;
+}
+
+#crossMiddle {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #7e6870;
+}
+
+#middleCircle {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 30px;
+  background: radial-gradient(#7e6870, #714959);
+}
+
+#crossTop {
+  position: absolute;
+  background-color: #7e6870;
+  top: 0.5rem;
+  left: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  box-shadow: 1.5px 0px #000000;
+  cursor: pointer;
+}
+
+#topArrow {
+  position: absolute;
+  top: 0.3rem;
+  left: 0.1rem;
+  width: 0rem;
+  height: 0rem;
+  border-style: solid;
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent #714959 transparent;
+}
+
+#crossRight {
+  position: absolute;
+  background-color: #7e6870;
+  top: 2rem;
+  left: 3.53rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 1.5px 1.5px #000000;
+  cursor: pointer;
+}
+
+#rightArrow {
+  position: absolute;
+  top: 0.1rem;
+  left: 0.5rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 0 8px 8px;
+  border-color: transparent transparent transparent #714959;
+}
+
+#crossBottom {
+  position: absolute;
+  background-color: #7e6870;
+  top: 3.5rem;
+  left: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 1.5px 1.5px #000000;
+  cursor: pointer;
+}
+
+#bottomArrow {
+  position: absolute;
+  top: 0.4rem;
+  left: 0.1rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 8px 0 8px;
+  border-color: #714959 transparent transparent transparent;
+}
+
+#crossLeft {
+  position: absolute;
+  background-color: #7e6870;
+  top: 2rem;
+  left: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  box-shadow: 0px 1.5px #000000;
+}
+
+#leftArrow {
+  position: absolute;
+  top: 0.1rem;
+  left: 0.3rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 8px 8px 0;
+  border-color: transparent #714959 transparent transparent;
+}
+
+/* --- Pokedex's right side ---*/
+.rightSide {
+  position: relative;
+  top: 6.6rem;
+  float: right;
+  background-color: #252525;
+  height: 24.7rem;
+  width: 21rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  box-shadow: -10px 8px 1px 3px #006a4e;
+}
+
+.topRightPart {
+  position: absolute;
+  top: 3.1rem;
+  right: 8.5rem;
+  background-color: #252525;
+  width: 12.5rem;
+  height: 200px;
+  z-index: 0;
+}
+
+/* --- Pokedex's logic right top---*/
+#rectangleCover {
+  position: absolute;
+  top: -3.4rem;
+  left: 0rem;
+  width: 10rem;
+  height: 58px;
+  background: #252525;
+}
+
+#concaveCover {
+  position: absolute;
+  top: 0rem;
+  left: 5rem;
+  width: 10rem;
+  height: 58px;
+  background: #252525;
+  z-index: 1;
+}
+
+#concave {
+  position: absolute;
+  top: -3.4rem;
+  left: 7rem;
+  width: 10rem;
+  height: 58px;
+  transform: rotateX(180deg);
+  background: #252525;
+  background: radial-gradient(
+    circle 2rem at 120% 50%,
+    white,
+    white 100px,
+    #252525 1rem
+  );
+  background-size: 100px 200px, 100px 200px;
+  background-position: 0 0, 100% 0;
+  background-repeat: no-repeat;
+}
+
+/* - Right part Body - */
+
+#animated {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -2rem;
+  left: 1.5rem;
+  border-radius: 10px;
+  height: 7rem;
+  width: 7rem;
+  box-shadow: 0 0 20px #382626 inset, 0px 0px 5px 1px #2b2a2a;
+  background-image: url(images/Pokeball.png);
+  background-size: contain;
+  box-shadow: 0 0 20px 5px #000000 inset, 1px 2px 5px 1px #000000;
+  z-index: 1;
+}
+
+.animatedpoke {
+  width: 5rem;
+  height: 5rem;
+  z-index: 10;
+}
+
+#keyboard {
+  position: absolute;
+  top: 9.5rem;
+  left: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 5rem;
+  width: 16rem;
+}
+
+.key {
+  background: #8290e3;
+  height: 2rem;
+  width: 5rem;
+  border-radius: 4px;
+  box-shadow: 1px 3px 5px 2px #1c1f31;
+}
+
+.rightButton {
+  position: absolute;
+  top: 15rem;
+  left: 16.7rem;
+  border-radius: 100px;
+  height: 1rem;
+  width: 3rem;
+  box-shadow: 3px 2px 5px 0px #1b1b1b;
+  background: grey;
+  cursor: pointer;
+}
+
+.rightButton2 {
+  position: absolute;
+  top: 15rem;
+  left: 13rem;
+  border-radius: 100px;
+  height: 1rem;
+  width: 3rem;
+  box-shadow: 3px 2px 5px 0px #1b1b1b;
+  background: grey;
+  cursor: pointer;
+}
+
+#whiteBoard {
+  position: absolute;
+  top: 16.5rem;
+  left: 2.5rem;
+  height: 1.7rem;
+  width: 5rem;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 3px #1b1b1b;
+}
+
+#whiteBoard2 {
+  position: absolute;
+  top: 16.5rem;
+  left: 8rem;
+  height: 1.7rem;
+  width: 5rem;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 3px #1b1b1b;
+}
+
+#bigGreenButton {
+  position: absolute;
+  top: 16.5rem;
+  left: 18.3rem;
+  height: 1rem;
+  width: 1rem;
+  background: linear-gradient(#acfb76, #30da0c);
+  border-radius: 100px;
+  border: #006a4e solid 3px;
+  box-shadow: 0px 0px 3px 1px #30da0c;
+  cursor: pointer;
+}
+
+#boards {
+  position: absolute;
+  top: 18rem;
+  left: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 7rem;
+  width: 16rem;
+}
+
+.aboutPokemon {
+  background: grey;
+  height: 5rem;
+  width: 7.5rem;
+  border-radius: 4px;
+  box-shadow: 1px 3px 5px 2px #1c1f31;
+}
+
+/* --- Pokedex's middle insertion ---*/
+.pokedexFlex {
+  position: absolute;
+  left: 23.2rem;
+  height: 32rem;
+  width: 3.1rem;
+  background: linear-gradient(to right, #003b2b, #252525, #003b2b);
+  z-index: 1;
+}
+
+.insertion {
+  position: absolute;
+  z-index: 2;
+  width: 3.1rem;
+  height: 3rem;
+  background: linear-gradient(to right, #006a4e, #252525, #006a4e);
+  border-bottom: solid #006a4e 2px;
+  border-top: solid #006a4e 2px;
+}
+
+.insertion:nth-child(2) {
+  top: 6rem;
+}
+
+.insertion:nth-child(3) {
+  bottom: 6rem;
+}
+
+.insertion:nth-child(4) {
+  bottom: 0rem;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <title>STRIKE the Earth!</title>
+</head>
+<body>
+    <h1 class="title">STRIKE THE EARTH!</h1>
+    <button id=start>Game Start</button>
+    <audio id="audio" controls>
+        <source type="audio/wav" src="Audios/Strike!.mp3">
+    </audio>
+    <h2 class="gamestats">Score: <span id="score">00</span> Time: <span id="timeLeft">60</span></h2>    
+    <div class="center">
+        <div class="grid">
+            <div class="cell" id="1"></div>
+            <div class="cell" id="2"></div>
+            <div class="cell" id="3"></div>
+            <div class="cell" id="4"></div>
+            <div class="cell" id="5"></div>
+            <div class="cell" id="6"></div>
+            <div class="cell" id="7"></div>
+            <div class="cell" id="8"></div>
+            <div class="cell" id="9"></div>
+            <div class="cell" id="10"></div>
+            <div class="cell" id="11"></div>
+            <div class="cell" id="12"></div>
+        </div>
+    </div>
+    <img class="shovelKnightGif" src="Images/ShovelRunning.gif" alt="Our Hero is running">
+    <img class="shieldKnight" src="Images/Shield.png" alt="Our Hero is running">
+    <div >
+        <img class="letter" src="Images/Letter.png" alt="The letter of instructions">
+        <h2 class="instruction">ShovelKnight,<br>
+            The Dark Knight is doing it again, he stole the king crown and is trying to scape.<br>HIT<em>CLICK</em>  HIM HARD WITH YOUR SHOVEL!
+        </h2>
+    </div>
+</body>
+<script src="app.js" charset="utf-8"></script>
+</html>

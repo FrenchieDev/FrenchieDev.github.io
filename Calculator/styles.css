@@ -1,0 +1,265 @@
+/*  ----- Default views ----- */
+/* --- Default properties --- */
+* {
+  padding: 1px;
+  margin: 0px;
+  font-family: Bangers;
+}
+
+body {
+  background-image: url("https://image.freepik.com/free-photo/top-view-working-desk-female-office-supplies_1163-2584.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+button {
+  margin: 0px;
+  font-size: 20px;
+}
+
+/* --- Title and stuff --- */
+.title {
+  padding: 0;
+  margin-bottom: 5%;
+  position: absolute;
+  width: 99%;
+  top: 5%;
+  text-align: center;
+  font-size: 60px;
+  color: #006a4e;
+}
+
+/* --- Calculator body --- */
+
+.calculator {
+  border: 1px solid #252525;
+  border-radius: 10px;
+  background-color: #252525;
+  width: fit-content;
+  margin: auto;
+  margin-top: 9%;
+}
+
+.display {
+  padding: 20px;
+  max-width: 405px;
+  overflow: hidden;
+}
+
+/* --- Calculator keyboard --- */
+
+.keys {
+  display: flex;
+}
+
+/* - Delete & erase - */
+.check {
+  display: flex;
+  align-items: flex-start;
+  padding: 5px 10px 20px 20px;
+  text-align: center;
+  border: 0px;
+  padding: 0px;
+  margin-left: 4.5%;
+}
+
+.check button {
+  border: 2px solid #002e22;
+  background-color: #252525;
+  color: #006a4e;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+}
+
+.check button:hover {
+  box-shadow: 0px 0px 6px #006a4e;
+  transition: all 0.09;
+}
+
+/* - Logo - */
+
+.devF {
+  color: #006a4e;
+  margin-left: 30%;
+  margin-top: 5px;
+  font-size: 40px;
+}
+
+.logo {
+  border: 2px solid #002e22;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  bottom: 10px;
+  left: 90%;
+}
+
+/* - Number's keys - */
+
+.numbers {
+  padding: 5px 10px 20px 20px;
+}
+
+.numbers div {
+  text-align: center;
+  border: 0px;
+}
+
+.numbers button {
+  border: 2px solid #002e22;
+  background-color: #006a4e;
+  color: #252525;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+}
+
+.numbers button:hover {
+  box-shadow: 0px 0px 6px #006a4e;
+  transition: all 0.09;
+}
+
+/*Operation's Keys - O - */
+
+.operations {
+  padding: 5px 20px 20px 20px;
+}
+
+.operations button {
+  border: 2px solid #002e22;
+  background-color: #252525;
+  color: #006a4e;
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+}
+
+.operations button:hover {
+  box-shadow: 0px 0px 6px #006a4e;
+  transition: all 0.09;
+}
+
+.equality {
+  padding: 0px 20px 20px 20px;
+}
+
+.equality button {
+  width: 100%;
+  background-color: #006a4e;
+  color: #252525;
+  font-size: 50px;
+}
+
+.equality button:hover {
+  box-shadow: 1px 1px 6px #006a4e;
+  transition: all 0.09;
+}
+
+#result {
+  padding: 10px;
+  background-color: #006a4e;
+  color: #252525;
+  height: 50px;
+  font-size: 50px;
+  text-align: right;
+}
+
+/* ----- Medium views ----- */
+@media only screen and (max-width: 850px) {
+  .calculator {
+    margin-top: 20%;
+  }
+
+  .display {
+    max-width: 500px;
+  }
+
+  .check {
+    margin-left: 3.9%;
+  }
+
+  .check button {
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+  }
+
+  .devF {
+    font-size: 35px;
+    margin-left: 20%;
+    margin-top: 25px;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+    bottom: 0px;
+    left: 40%;
+  }
+
+  .numbers button {
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+  }
+
+  .operations {
+    max-width: 170px;
+  }
+
+  .operations button {
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+  }
+}
+
+/*  ----- Small views ----- */
+@media only screen and (max-width: 450px) {
+  .title {
+    font-size: 40px;
+    top: 5%;
+  }
+
+  .calculator {
+    margin-top: 35%;
+  }
+
+  .check button {
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+  }
+
+  .devF {
+    font-size: 20px;
+    margin-left: 10%;
+    margin-top: 10px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    bottom: 0px;
+    left: 38%;
+  }
+
+  .numbers button {
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+  }
+
+  .operations {
+    max-width: 80px;
+    padding: 5px 20px 20px 10px;
+  }
+
+  .operations button {
+    width: 35px;
+    height: 35px;
+    font-size: 25px;
+  }
+}

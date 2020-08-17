@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  background-image: url(images/background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@font-face {
+  font-family: gallery;
+  src: url(fonts/Gallery.TTF);
+}
+
+#galleryTitle {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 0rem;
+  width: 99%;
+  text-align: center;
+  color: #145c2c;
+  font-family: gallery;
+  font-size: 4rem;
+}
+
+.carousel {
+  display: flex;
+  height: 40rem;
+  overflow: hidden;
+}
+
+#photoGallery {
+  position: relative;
+  padding: 0.5rem;
+  top: 10rem;
+  margin: 1rem;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 1rem;
+  background-color: #145c2c;
+  box-shadow: 5px 5px 10px 0px black;
+  animation: showPhotos 30s linear infinite reverse;
+}
+
+#photoGallery:hover {
+  width: 25rem;
+  height: 25rem;
+  transition: 2s;
+}
+
+@keyframes showPhotos {
+  from {
+    left: -232%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.FrenchieDev {
+  position: absolute;
+  width: 7rem;
+  height: 7rem;
+  bottom: 1rem;
+  right: 1rem;
+  border-radius: 5rem;
+  padding: 0.2rem;
+  background-color: #145c2c;
+}
+
+#thanks {
+  position: absolute;
+  bottom: 0rem;
+  right: 8rem;
+  color: #145c2c;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}

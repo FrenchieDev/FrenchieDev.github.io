@@ -1,0 +1,381 @@
+/*// Default view //*/
+/* --- Default properties --- */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* --- Title & Music --- */
+.title {
+  position: absolute;
+  padding: 0;
+  height: 50%;
+  width: 35%;
+  left: 63%;
+  top: -3%;
+  z-index: 10;
+}
+
+.ost {
+  position: absolute;
+  z-index: 10;
+  opacity: 0.2;
+  width: 15%;
+  height: 5%;
+}
+
+/* --- Map --- */
+
+.grass,
+.sky,
+.road {
+  position: relative;
+}
+
+.sky {
+  height: 45%;
+  background: skyblue;
+}
+
+.grass {
+  height: 25%;
+  background: #48a878;
+}
+
+.road {
+  height: 30%;
+  background: dimgrey;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+}
+
+.lines {
+  box-sizing: border-box;
+  border: 3px dashed #fff;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+}
+
+.banana {
+  position: absolute;
+  width: 3%;
+  bottom: 62%;
+  left: 57%;
+  animation: disappear 0.001s 16.7s forwards;
+  z-index: 5;
+}
+
+/* --- Clouds --- */
+
+.cloud {
+  position: absolute;
+}
+
+.cloud:nth-child(2) {
+  width: 15%;
+  top: 5%;
+  left: 30%;
+  opacity: 1;
+  animation: wind 20s linear infinite reverse;
+  z-index: 3;
+}
+
+.cloud:nth-child(3) {
+  width: 25%;
+  height: 30%;
+  top: 40%;
+  left: 10%;
+  opacity: 0.3;
+  animation: wind 5s linear infinite reverse;
+}
+
+.cloud:nth-child(4) {
+  height: 30%;
+  top: 55%;
+  opacity: 0.5;
+  animation: wind 17s linear infinite reverse;
+}
+
+.cloud:nth-child(5) {
+  width: 2%;
+  top: 100%;
+  opacity: 1;
+  animation: wind 8s linear infinite reverse;
+  z-index: 3;
+}
+
+.cloud:nth-child(6) {
+  width: 20%;
+  height: 15%;
+  top: 45%;
+  opacity: 2;
+  animation: wind 50s linear infinite reverse;
+  z-index: 4;
+}
+
+.cloud:nth-child(7) {
+  width: 20%;
+  height: 35%;
+  top: 50%;
+  opacity: 0.8;
+  animation: wind 30s linear infinite reverse;
+  z-index: 4;
+}
+
+.cloud:nth-child(8) {
+  width: 5%;
+  top: 70%;
+  opacity: 1;
+  animation: wind 13s linear infinite reverse;
+  z-index: 3;
+}
+
+/* --- Mountains --- */
+
+.mountain {
+  position: absolute;
+}
+
+.mountain:nth-child(1) {
+  bottom: 95%;
+  left: -5%;
+  width: 20%;
+  z-index: 1;
+}
+.mountain:nth-child(2) {
+  bottom: 75%;
+  width: 30%;
+  left: 2%;
+  z-index: 4;
+}
+.mountain:nth-child(3) {
+  bottom: 99%;
+  width: 25%;
+  left: 15%;
+  z-index: 1;
+}
+.mountain:nth-child(4) {
+  bottom: 98%;
+  width: 10%;
+  height: 150%;
+  left: 35%;
+  z-index: 1;
+}
+.mountain:nth-child(5) {
+  bottom: 90%;
+  width: 30%;
+  height: 100%;
+  left: 37%;
+  z-index: 1;
+}
+.mountain:nth-child(6) {
+  bottom: 90%;
+  width: 40%;
+  left: 50%;
+  z-index: 0;
+}
+.mountain:nth-child(7) {
+  bottom: 80%;
+  width: 25%;
+  left: 80%;
+  z-index: 4;
+}
+.mountain:nth-child(8) {
+  bottom: 70%;
+  width: 20%;
+  left: 60%;
+  z-index: 4;
+}
+
+.mountain:nth-child(9) {
+  bottom: 90%;
+  width: 15%;
+  height: 200%;
+  left: 75%;
+  z-index: 0;
+}
+
+/* --- Kart's Drivers --- */
+
+.dK {
+  width: 2.5rem;
+  position: absolute;
+  margin: 0;
+  padding: 0%;
+  top: 25%;
+  left: 0px;
+  animation: drive 5s both 5s infinite linear, donkeyDrive 4s infinite ease;
+  z-index: 5;
+}
+
+.peach {
+  position: absolute;
+  width: 6rem;
+  margin: 0;
+  padding: 0%;
+  bottom: 100%;
+  left: 0%;
+  animation: drive 6s both 1s infinite linear;
+  z-index: 5;
+}
+
+.toad {
+  position: absolute;
+  width: 6rem;
+  margin: 0;
+  padding: 0%;
+  bottom: 85%;
+  left: 0%;
+  animation: drive 4s both 5s infinite linear;
+  z-index: 5;
+}
+
+.mario {
+  position: absolute;
+  width: 6rem;
+  margin: 0;
+  padding: 0%;
+  bottom: 60%;
+  animation: drive 11s both infinite linear, jump 1.3s 5.4s,
+    hit 1s 16.8s ease-in;
+  z-index: 6;
+}
+
+.koopa {
+  position: absolute;
+  width: 6rem;
+  margin: 0;
+  padding: 0%;
+  bottom: 50%;
+  animation: drive 13s both 1s infinite linear;
+  z-index: 6;
+}
+
+.yoshi {
+  position: absolute;
+  width: 6rem;
+  margin: 0;
+  padding: 0%;
+  bottom: 30%;
+  animation: drive 5s both infinite linear;
+  z-index: 6;
+}
+
+.luigi {
+  position: absolute;
+  width: 6rem;
+  margin: 0;
+  padding: 0%;
+  bottom: 10%;
+  animation: drive 6s both infinite linear;
+  z-index: 6;
+}
+
+.bowser {
+  position: absolute;
+  width: 6rem;
+  margin: 0;
+  padding: 0%;
+  bottom: -5%;
+  animation-name: drive;
+  animation-duration: 15s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: 6;
+}
+
+/*// Animation Keyframes //*/
+
+@keyframes drive {
+  from {
+    left: -20%;
+  }
+  to {
+    left: 120%;
+  }
+}
+
+@keyframes wind {
+  from {
+    left: -20%;
+  }
+  to {
+    left: 120%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 60%;
+  }
+  50% {
+    bottom: 90%;
+  }
+  100% {
+    bottom: 60%;
+  }
+}
+
+@keyframes donkeyDrive {
+  0% {
+    top: 50%;
+  }
+  20% {
+    top: 60%;
+  }
+  40% {
+    top: 20%;
+  }
+  60% {
+    top: 60%;
+  }
+  80% {
+    top: 20%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+@keyframes disappear {
+  from {
+    left: 57%;
+  }
+  to {
+    left: 120%;
+  }
+}
+
+@keyframes hit {
+  0% {
+    bottom: 60%;
+    left: 56%;
+  }
+  40% {
+    transform: rotate(490deg);
+    z-index: 10;
+  }
+  50% {
+    bottom: 200%;
+    z-index: 10;
+  }
+  60% {
+    transform: rotate(590deg);
+    z-index: 10;
+  }
+  100% {
+    left: 66%;
+    bottom: 56%;
+    transform: rotate(1080deg);
+  }
+}

@@ -1,0 +1,291 @@
+body {
+  background-image: url("Images/Background.jpg");
+  background-size: cover;
+  text-align: center;
+  background-attachment: fixed;
+}
+
+@font-face {
+  font-family: arcade;
+  src: url(fonts/ARCADECLASSIC.TTF);
+}
+
+.title {
+  color: #f9a421;
+  font-family: "Berkshire Swash", cursive;
+  font-size: 4em;
+  padding: 0px;
+  margin: 1% 0px 0px 0px;
+}
+
+.gamestats {
+  color: #f9a421;
+  font-family: "Berkshire Swash", cursive;
+  font-size: 2em;
+  position: absolute;
+  right: 4rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+}
+
+.cell {
+  height: 8rem;
+  width: 8rem;
+  border-style: solid;
+  border-color: #f9a421;
+  cursor: url("Images/Shovel.png"), auto;
+}
+
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  width: 34rem;
+  height: 10rem;
+}
+
+.darkKnight {
+  background-image: url("Images/DarkKnight.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.shovelKnightGif {
+  width: 11rem;
+  height: 14rem;
+  position: absolute;
+  bottom: 4rem;
+  right: 0px;
+  animation: shovelNightRun 4s linear infinite;
+  transform: rotateY(180deg);
+}
+
+.shieldKnight {
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  bottom: 5rem;
+  left: 5px;
+  z-index: 2;
+}
+
+.letter {
+  background-image: url(Images/Letter.png);
+  background-size: cover;
+  position: absolute;
+  left: -2rem;
+  top: 6rem;
+  width: 25rem;
+  height: 29rem;
+}
+
+.instruction {
+  position: absolute;
+  max-width: 11rem;
+  top: 14rem;
+  left: 6rem;
+  font-family: arcade;
+  font-size: 1.3rem;
+  color: #440303;
+}
+
+em {
+  text-decoration: line-through;
+}
+
+@keyframes shovelNightRun {
+  0% {
+    left: 87%;
+  }
+  49.9% {
+    transform: rotateY(180deg);
+  }
+  50% {
+    left: 70%;
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    left: 87%;
+    transform: rotateY(0deg);
+  }
+}
+
+#score {
+  font-size: 1.3em;
+}
+
+#timeLeft {
+  font-size: 1.3em;
+}
+
+#start {
+  background-color: #031a41;
+  color: #f9a421;
+  font-family: "Berkshire Swash", cursive;
+  font-size: 2em;
+  border-radius: 1rem;
+}
+
+#audio {
+  display: none;
+}
+
+/*  ----- Medium views ----- */
+@media only screen and (max-height: 830px) and (max-width: 700px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .gamestats {
+    width: 100%;
+    top: 9rem;
+    font-size: 2rem;
+    right: 0rem;
+  }
+
+  .grid {
+    margin-left: 0.5rem;
+    margin-top: 17%;
+    width: 100%;
+  }
+
+  .cell {
+    width: 23%;
+    height: 58%;
+    border-style: solid;
+    border-color: #f9a421;
+    cursor: url("Images/Shovel.png"), auto;
+  }
+
+  .shovelKnightGif {
+    width: 36%;
+    height: 28%;
+    position: absolute;
+    bottom: 1%;
+  }
+
+  @keyframes shovelNightRun {
+    0% {
+      left: 60%;
+    }
+    49.9% {
+      transform: rotateY(180deg);
+    }
+    50% {
+      left: 10%;
+      transform: rotateY(0deg);
+    }
+
+    100% {
+      left: 60%;
+      transform: rotateY(0deg);
+    }
+  }
+
+  .shieldKnight {
+    display: none;
+  }
+
+  .letter {
+    display: none;
+  }
+
+  .instruction {
+    display: none;
+  }
+}
+
+/*  ----- Lateral views ----- */
+@media only screen and (max-height: 450px) and (max-width: 830px) {
+  body {
+    text-align: unset;
+  }
+
+  button {
+    position: absolute;
+    max-width: 40%;
+    left: 2rem;
+  }
+
+  .title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .gamestats {
+    width: 40%;
+    top: 5.5rem;
+    left: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .grid {
+    position: absolute;
+    margin: 0;
+    top: 5rem;
+    right: 1rem;
+    width: 60%;
+  }
+
+  .cell {
+    width: 23%;
+    height: 50%;
+  }
+
+  .shovelKnightGif {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    bottom: 5.1rem;
+    transform: rotateY(180deg);
+  }
+
+  @keyframes shovelNightRun {
+    0% {
+      left: 25%;
+    }
+    49.9% {
+      transform: rotateY(180deg);
+    }
+    50% {
+      left: 0%;
+      transform: rotateY(0deg);
+    }
+
+    100% {
+      left: 25%;
+      transform: rotateY(0deg);
+    }
+  }
+  .shieldKnight {
+    display: none;
+  }
+
+  .instruction {
+    display: none;
+  }
+
+  .letter {
+    display: none;
+  }
+}
+
+/*  ----- Small views ----- */
+@media only screen and (max-height: 675px) and (orientation: portrait) {
+  .grid {
+    margin-left: 2px;
+  }
+
+  .cell {
+    height: 48%;
+  }
+
+  .shovelKnightGif {
+    width: 30%;
+    height: 20%;
+  }
+}
